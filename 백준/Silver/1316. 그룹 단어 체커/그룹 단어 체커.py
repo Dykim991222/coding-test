@@ -13,10 +13,9 @@ def check_group_words(word):
     prev = ''
 
     for ch in word:
-        if ch != prev:
-            if ch in seen:
-                return 0
-            seen.add(ch)
+        if ch != prev and ch in seen:
+            return 0
+        seen.add(ch)
         prev = ch
     
     return 1
